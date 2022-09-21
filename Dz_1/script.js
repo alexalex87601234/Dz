@@ -23,6 +23,28 @@
 
 Проверить, чтобы все работало без ошибок в консоли */
 
+/* Variant_1 */
+
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false,
+// };
+
+// const lastMovie = prompt('Один из последних просмотренных фильмов?', '');
+// const ratingMovie = prompt('На сколько оцените его?', '');
+
+// personalMovieDB.movies.lastMovie;
+// personalMovieDB.movies.lastMovie = ratingMovie;
+
+// console.log(personalMovieDB)
+
+/* Variant_2 */
+
 const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
 const personalMovieDB = {
@@ -33,13 +55,12 @@ const personalMovieDB = {
     privat: false,
 };
 
-const lastMovie = prompt('Один из последних просмотренных фильмов?', '');
-const ratingMovie = prompt('На сколько оцените его?', '');
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = +prompt('На сколько оцените его?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = +prompt('На сколько оцените его?', '');
 
-personalMovieDB.movies.lastMovie;
-personalMovieDB.movies.lastMovie = ratingMovie;
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-console.log(personalMovieDB)
-
-
-
+console.log(personalMovieDB);
