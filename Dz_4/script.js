@@ -24,7 +24,6 @@ function start() {
         numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
     }
 }
-
 start();
 
 const personalMovieDB = {
@@ -32,7 +31,7 @@ const personalMovieDB = {
     movies: {},
     actors: {},
     genres: [],
-    privat: false
+    privat: true,
 }
 
 function rememberMyFilms() {
@@ -49,7 +48,6 @@ function rememberMyFilms() {
           }
     }
 }
-
 rememberMyFilms();
 
 function detectedPersonalLevel() {
@@ -63,10 +61,23 @@ function detectedPersonalLevel() {
         alert('Произошла ошибка');
     }
 }
-
 detectedPersonalLevel();
 
-console.log(personalMovieDB)
+function showMyDB( hidden ) {
+    if ( !hidden ) {
+        console.log(personalMovieDB);
+    }
+}
+showMyDB(personalMovieDB.privat);
+
+function writeYourGenres() {
+    for (let i = 1; i <= 3; i ++) {
+        personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
+    }
+}
+writeYourGenres();
+
+console.log(personalMovieDB);
 
 
 
